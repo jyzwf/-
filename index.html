@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<title>首页</title>
+<style type="text/css" media="screen">
+::-webkit-input-placeholder { /* WebKit browsers */ 
+color: #fff; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+color: #fff; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+color: #fff; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+color: #fff; 
+} 
+
+body{
+	display:none;
+}
+</style>
+
+<script type="text/javascript">
+	
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+	    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	    recalc = function () {
+	      var clientWidth = docEl.clientWidth;
+	      if (!clientWidth) return;
+	      docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+	    };
+	
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+	<script type="text/javascript" src='./dist/loading.js'></script>
+	<div id="notice"></div>
+	<div id="load_finish">已全部加载</div>
+	<section class='fixed_part'>
+	
+		<header id="header" class="">
+		<!-- <img src="./src/asset/imgs/ic_volume_up.svg" alt=""> -->
+		杭电助手招新系统
+		<span>
+			<input type='text' placeholder='请输入查找内容' id='search' autofocus="autofocus" />
+			<img id='search_pic' src="http://qiniu.hduhelp.com/ic_search.svg" alt="">
+		</span>
+			
+		</header>
+	
+		<!-- tab -->
+		<nav>
+		<a href="#school_org" class="active" title="">校级组织</a>
+		<a href="#hos_level_org" title="">院级组织</a>
+		<a href="#school_hos_club" title="">校院社团</a>
+		<a href="#" class='slide' title=""></a>
+		</nav>
+	
+	</section>
+
+	<div class="blank"></div>
+	<!-- 图片 -->
+	<div class='banner_pic'>
+		<img src="./dist/asset/imgs/pic.jpg" alt="">
+	</div>
+
+	<!-- 社团列表 -->
+	<section id="clubs_list">
+	</section>
+	
+
+	<!-- 底部导航 -->
+	<div id="page_nav">
+		<a href="">
+			<img src="http://qiniu.hduhelp.com/index1.svg" alt="">
+			<span>报名</span>
+		</a>
+
+		<a href="" class="notice">
+			<span class="badge">99</span>
+			<img src="http://qiniu.hduhelp.com/msg1.svg" alt="">
+			<span>消息</span>
+		</a>
+
+		<a href="">
+			<img src="http://qiniu.hduhelp.com/person2.svg" alt="">
+			<span>个人中心</span>
+		</a>
+	</div>
+	
+<script type="text/javascript">
+	var window_url = 'http://recruit.hduhelp.com/index.php/mobile/index/getFormBasicData';
+</script>
+
+<script type="text/javascript">
+	$(function(){
+		$('body').css('display','block');
+	})
+</script>
+	
+	<script type="text/javascript" src='./dist/build.js'></script>
+</body>
+</html>

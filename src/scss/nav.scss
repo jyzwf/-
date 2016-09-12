@@ -1,0 +1,33 @@
+// tab 导航
+
+$unactive-color:#BDBDBD;
+$slide-color:#71d1cc;
+$balck:#000;
+$white:#fff;
+
+nav{
+	display:flex;
+	position:relative;
+	width:100%;
+	background:$white;
+	a:not(.slide){
+		flex:1;
+		color:$unactive-color;
+		text-align:center;
+		padding:0.1rem 0;
+
+		&.active{
+			color:$balck;
+		}
+	}	
+
+	.slide{
+		width:calc(100% / 3);
+		position:absolute;
+		background:$slide-color;
+		height:0.04rem;
+		left:0;
+		bottom:0;
+		transition: all 0.2s linear;
+	}
+}

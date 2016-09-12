@@ -1,0 +1,48 @@
+// 底部导航
+
+$white:#fff;
+$border-color:#e0e0e0;
+$word-color:#BDBDBD;
+$red:red;
+
+#page_nav{
+	width:100%;
+	position:fixed;
+	left:0;
+	bottom:0;
+	display:flex;
+	background:$white;
+	border-top:1px solid $border-color;
+	
+	a{
+		flex:1;
+		padding:0.04rem 0;
+		text-align:center;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		font-size:0.14rem;
+		color:$word-color;
+	}
+
+	img{
+		width:.3rem;
+		height:.3rem;
+	}
+
+	.notice{
+		position:relative;
+
+		.badge{
+			position:absolute;
+			background:$red;
+			border-radius:50%;
+			width:0.2rem;
+			height:0.2rem;
+			color:$white;
+			left:calc(50% + 0.05rem);
+			top:-0.02rem;
+			line-height:0.2rem;
+		}
+	}
+}
